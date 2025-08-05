@@ -1,9 +1,10 @@
 {
-  "name": "shadcn-ui-monorepo",
+  "name": "dayz-integrations",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "build": "turbo build",
+    "clean": "turbo clean && git clean -xdf node_modules .turbo pnpm-lock.yaml",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""

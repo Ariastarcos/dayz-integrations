@@ -10,10 +10,10 @@ importers:
     devDependencies:
       '@workspace/eslint-config':
         specifier: workspace:*
-        version: link:packages/eslint-config
+        version: link:tooling/eslint-config
       '@workspace/typescript-config':
         specifier: workspace:*
-        version: link:packages/typescript-config
+        version: link:tooling/typescript-config
       prettier:
         specifier: ^3.5.1
         version: 3.5.1
@@ -26,6 +26,9 @@ importers:
 
   apps/web:
     dependencies:
+      '@tailwindcss/postcss':
+        specifier: ^4.0.8
+        version: 4.0.8
       '@workspace/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -56,15 +59,15 @@ importers:
         version: 19.0.4(@types/react@19.0.10)
       '@workspace/eslint-config':
         specifier: workspace:^
-        version: link:../../packages/eslint-config
+        version: link:../../tooling/eslint-config
       '@workspace/typescript-config':
         specifier: workspace:*
-        version: link:../../packages/typescript-config
+        version: link:../../tooling/typescript-config
       typescript:
         specifier: ^5.7.3
         version: 5.7.3
 
-  packages/eslint-config:
+  tooling/eslint-config:
     devDependencies:
       '@next/eslint-plugin-next':
         specifier: ^15.1.7
@@ -103,7 +106,7 @@ importers:
         specifier: ^8.24.1
         version: 8.24.1(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3)
 
-  packages/typescript-config: {}
+  tooling/typescript-config: {}
 
   packages/ui:
     dependencies:
